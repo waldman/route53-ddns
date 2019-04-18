@@ -22,10 +22,10 @@ set -euo pipefail
 IFS=$'\n\t'
 
 ENDPOINT="route53.amazonaws.com"
-RECORD_TTL=300
+RECORD_TTL=60
 #RECORD_NAME=""
 RECORD_TYPE="A"
-#RECORD_VALUE=""
+RECORD_VALUE=$(curl ifconfig.me)
 #HOSTED_ZONE_ID=""
 API_PATH="/2013-04-01/hostedzone/${HOSTED_ZONE_ID}/rrset/"
 
